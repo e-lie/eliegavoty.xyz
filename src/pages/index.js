@@ -23,7 +23,7 @@ function HomepageHeader() {
           https://linktr.ee/julescipher
         </Link>
         </p>
-        <p  className="hero__subtitle">...et de philosophie par exemple >>>>> <Link
+        <p  className="hero__subtitle">...et de philosophie, par exemple >>>>> <Link
             className="button button--secondary button--lg"
             to='https://reprogrammerboitenoi.re/'>
           https://reprogrammerboitenoi.re/
