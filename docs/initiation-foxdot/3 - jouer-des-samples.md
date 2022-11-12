@@ -15,7 +15,7 @@ Pour voir quel caractère correspond à quel fichier audio, exécutez:
 
 `print(Samples)`
 
-Maintenant jouons un sample avec 
+Maintenant jouons un sample avec le code suivant (la dur par défaut est 0.5, donc chaque caractère dure un demi beat)
 
 `bd >> play("x")`
 
@@ -50,7 +50,7 @@ d1 >> play("x-o[-----]")
 d1 >> play("x-o[--------------]")
 ```
 
-et peuvent être mis entre parenthèses comme s'ils étaient eux-mêmes un caractère.
+... et peuvent être mis entre parenthèses comme s'ils étaient eux-mêmes un caractère.
 
 ```python
 d1 >> play("x[--]o(=[-o])")
@@ -77,8 +77,7 @@ d1 >> play("<X   ><-   ><#   ><V   >")
 d1 >> play("<X   >< -  ><  # ><   V>")
 ```
 
-Chaque personnage est associé à un dossier de fichiers sonores et vous pouvez sélectionner différents
-
+Chaque caractère est associé à un dossier de fichiers sonores et vous pouvez sélectionner différents
 échantillons en utilisant l'argument du mot clé "sample".
 
 ```python
@@ -89,7 +88,7 @@ d1 >> play("(x[--])xu[--]", sample=1)
 d1 >> play("(x[--])xu[--]", sample=2)
 ```
 
-Changez l'échantillon pour chaque battement
+Changez l'échantillon pour chaque beat 
 
 `d1 >> play("(x[--])xu[--]", sample=[1,2,3])`
 

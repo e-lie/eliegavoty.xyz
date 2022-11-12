@@ -10,22 +10,27 @@ Au démarrage de FoxDot, tous les noms composés d'une lettre et d'un chiffre (0
 
 Pour créer notre premier son il nous faut donner quelque chose (un synthétiseur et une note) à jouer à l'un des players à l'aide de l'opérateur `>>`. Par exemple : 
 
-`p1 >> piano(0)` ou encore `b3 >> blip(2)`.
+`p1 >> pluck(0)` ou encore `b3 >> blip(2)`.
 
 Ici et dans tous les tutoriels suivant, dès qu'un exemple se présente copiez le dans votre éditeur FoxDot et essayez le en l'activant avec `Control + Entrée`. 
 
 Il existe aussi `Alt + Entrée` qui active une seule ligne alors que `Control + Entrée` active tout un bloc de code sans ligne vide.
 
-Essayez librement ces deux combinaisons sur les 3 lignes suivantes;
+Essayez librement ces deux combinaisons sur le code suivant;
 
 ```python
-p1 >> piano(0)
+p1 >> pluck(0)
 b3 >> blip(2)
 p1.stop()
+
 b3.stop()
 ```
 
-Pour jouer plusieur notes on peut utiliser une liste de note :
+Pour afficher la liste des synthétiseurs/instruments disponibles exécutez:
+
+`print(SynthDefs)`
+
+Pour jouer plusieur notes on peut utiliser une liste (avec des crochets) de notes :
 
 `p1 >> blip([0, 1, 2])`
 
@@ -66,7 +71,7 @@ On peut également mettre des listes dans des listes. Les listes de valeurs sont
 
 `p1 >> blip([0, 0, 0], dur=[1, [2, .5], 4])`
 
-La liste de durée suivante équivaut à :  1,2,3,1,.5,4
+La liste de durée suivante équivaut à :  1,2,4,1,.5,4
 
 Si vous ne comprenez pas encore tout cela, ne vous inquiétez pas, vous en saurez plus sur les `Patterns` dans le tutoriel dédié plus tard.
 
@@ -80,7 +85,7 @@ Vous pouvez également attribuer directement des valeurs aux attributs des objet
 
 Pour voir tous les noms des attributs des joueurs vous pouvez exécuter
 
-print(Player.get_attributes())
+`print(Player.get_attributes())`
 
 Nous en reparlerons plus tard dans le tutoriel sur les attributs du joueur.
 
@@ -103,5 +108,6 @@ Et enlever la sourdine:
 <!-- Arrêtez (et non pas seulement coupez le son) des autres joueurs.
 p1.only() -->
 
-# Utilisez Ctrl+. pour tout arrêter (littéralement tout effacer de l'horloge d'exécution)
-Clock.clear()
+Utilisez Ctrl+. pour tout arrêter (littéralement tout effacer de l'horloge d'exécution). Ce raccourcit exécute en fait la commande suivante :
+
+`Clock.clear()`
