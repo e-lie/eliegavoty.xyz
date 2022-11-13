@@ -34,19 +34,26 @@ Ou comme l'exprime le manifeste de TOPLAP, un collectif à l'origine de la scèn
 ![Docusaurus logo](/img/foxdot_workshop_2.jpg)
 
 
-### 1.3. What is FoxDot? 
+### 1.3. Qu'est ce que FoxDot? 
 
-* FoxDot a été développé par Ryan Kirkbride à Leeds UK
-* FoxDot is a Python package that comes with its own IDE and plays music by accessing any SynthDefs stored on a local SuperCollider server with some custom bits of syntax to boot.
-* FoxDot est une librairie (un module) en langage de programmation python pour livecoder de la musique. Il s'installe avec son propre éditeur de code (facultatif). FoxDot joue de la musique en utilisant des synthétiseurs (SynthDefs) du logiciel SuperCollider.
-* Python est un langage de programmation très répendu et fait notamment pour être facilement accessible aux débutant.
+FoxDot est un outil qui simplifie la génération de musique via le code. Le projet est inspiré et basé sur SuperCollider. En effet SuperCollider est un logiciel de synthèse sonore et de composition algorithmique extrêment puissant et flexible mais complexe à aborder. Il nécessite une quantité assez importante de code pour générer de la musique.
+
+* FoxDot est une bibliothèque (library, une sorte de module à importer) en langage de programmation Python pour livecoder de la musique. Il s'installe avec son propre éditeur de code (facultatif).
+
+* FoxDot a été développé par Ryan Kirkbride à Leeds (UK) 
+
+* FoxDot joue de la musique en utilisant des synthétiseurs (SynthDefs) présent dans SuperCollider(controlé via OpenSoundControl).
+
+* Le Python est un langage de programmation très répandu et conçu notamment pour être facilement accessible aux débutants.
+
 * SuperCollider est un synthétiseur et langage de programmation pour la synthèse sonore et la composition algorithmique créé au départ par James McCartney en 1996.
-* FoxDot se concentre sur la composition utilisant des motifs musicaux plutôt que sur la synthèse sonore qui est laissée à SuperCollider (controlé via OpenSoundControl).
+
+* FoxDot se concentre sur la composition utilisant des motifs musicaux plutôt que sur la synthèse sonore qui est laissée à SuperCollider .
 
 
 #### Un petit diagramme pour donner une vision d'ensemble (pas de stress ça fonctionne même sans comprendre tout ça) :
 
-![Docusaurus logo](/img/foxdot_workshop_3.jpg)
+![foxdot architecture diagram](/img/foxdot_workshop_3.jpg)
 
 En mode plus technique: 
 
