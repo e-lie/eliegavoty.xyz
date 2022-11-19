@@ -4,6 +4,10 @@ sidebar_position: 1
 
 # Intro
 
+Ce support est sous licence `CC-BY-SA`. Il est partiellement une traduction du tutoriel FoxDot (in app), du cours de iShapeNoise/BBScar ici `https://gitlab.com/iShapeNoise/foxdot_codingmusic_part1` et un travail original.
+
+Un grand merci à BBScar, Qirky et les contributeurs de FoxDot, pour l'existence de ce logiciel fascinant et sa communauté.
+
 ### Qu'est-ce que le livecoding ?
 
 * Une performance artistique basée sur la programmation interactive de musique, visuels ou autre.
@@ -55,7 +59,7 @@ FoxDot est un outil qui simplifie la génération de musique via le code. Le pro
 
 ![foxdot architecture diagram](/img/foxdot_workshop_3.jpg)
 
-En mode plus technique: 
+En version plus technique: 
 
   - FoxDot is a python library, which can be used in own Python projects, or via Tkinter IDE.
   - It is also possible to configure other IDE’s to work with FoxDotn.

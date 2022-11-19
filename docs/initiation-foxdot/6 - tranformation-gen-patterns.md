@@ -4,8 +4,7 @@ sidebar_position: 6
 
 # 6 - Transformations et générateurs de Patterns
 
-
-
+Incoming :)
 
 
 
