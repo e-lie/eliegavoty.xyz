@@ -1,8 +1,8 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
-# 5 - Transformations et générateurs de Patterns
+# 6 - Transformations et générateurs de Patterns
 
 
 
