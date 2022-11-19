@@ -14,7 +14,7 @@ function HomepageHeader() {
       <div className="container">
         {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
         {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
-        <p className="hero__subtitle"><strong>Bonjour, je suis musicien, livecodeur, formateur et parfois philosophe des techniques.</strong></p>
+        <p className="hero__subtitle"><strong>Bonjour, je suis musicien, livecodeur, hacker, formateur et parfois philosophe des techniques.</strong></p>
         <p  className="hero__subtitle">Ce site vise à rassembler <Link href='/docs/workshop'>des tutoriels de livecoding</Link> et des liens vers :</p>
         <p  className="hero__subtitle">...mon travail de musique livecodée sous le pseudo Jules Cipher >>>> 
         <Link
