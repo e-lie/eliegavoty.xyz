@@ -8,7 +8,7 @@ FoxDot peut aussi être utilisé pour jouer et manipuler des samples (échantill
 
 * Pour cela, il suffit d'utiliser `play` qui est un synthétiseur spécial.
 
-* Le premier argument de play doit être une **chaîne de caractères** au lieu d'une liste de nombres comme vous le feriez pour tout autre synthétiseur.
+* Le premier argument de play doit être une **chaîne de caractères** (on parle de playstring dans FoxDot) au lieu d'une liste de nombres comme vous le feriez pour tout autre synthétiseur.
 
 * Chaque caractère représente un fichier audio différent, qui est stocké dans les sous-répertoires du dossier `FoxDot/snd/`.
 
@@ -16,7 +16,7 @@ Pour voir quel caractère correspond à quel fichier audio, exécutez:
 
 `print(Samples)`
 
-Maintenant jouons un sample avec le code suivant (la dur par défaut est 0.5, donc chaque caractère dure un demi beat)
+Maintenant jouons un sample avec le code suivant (la `dur` (duration) par défaut est 0.5 (ou 1/2), donc chaque caractère dure un demi beat)
 
 `bd >> play("x")`
 
@@ -29,11 +29,35 @@ bd >> play("o..o..x..")
 hh >> play(" -")
 ```
 
-Vous pouvez alterner un sample joué à chaque tour de boucle en utilisant des parenthèses (pour faire des `Patterns` imbriqués) : `d1 >> play("x-*(-=)")`
+### Factoriser/raccourcir une expression avec les parenthèses
 
-Par exemple le code suivant `"x-*(-=o)"` joue la même chose que `"x-*-x-*=x-*o"`
+
+On peut remplacer un caractère d'une playstring par un ensemble de caractères entre parenthèses. En faisant ceci, les caractères entre parenthèse son joué un par un à chaque répétition de la playstring: `d1 >> play("x-*(-=)")`
+
+Par exemple le code suivant `"x-*(-=o)"` joue la même chose que `"x-*-x-*=x-*o"` 
 
 Ou encore `"(x=)(-v)o."` est identique à `"x-o.=vo."`
+
+Les parenthèses dans une playstring servent donc à "factoriser" une phrase rythmique pour la rendre plus courte !
+
+Pour comprendre intuitivement l'utilité de cette fonction de factorisation je vous propose de recopier à la main et au fur et a mesure en remplaçant les différentes lignes de code ci-dessous :
+
+```python
+d1 >> play('.-')
+
+d1 >> play('.(---=)')
+
+d1 >> play('x(---=)')
+
+d1 >> play('(xo)(---=)')
+
+d1 >> play('((Xxxx)o)(---=)')
+```
+
+Si on devait l'écrire sans factorisation, la dernière ligne donnerait :
+
+`d1 >> play('X-o-x-o=x-o-x-o=')`
+
 
 ### Plusieurs coups sur un seul temps avec les crochets
 

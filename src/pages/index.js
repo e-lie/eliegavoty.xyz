@@ -15,7 +15,7 @@ function HomepageHeader() {
         {/* <h1 className="hero__title">{siteConfig.title}</h1> */}
         {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
         <p className="hero__subtitle"><strong>Bonjour, je suis musicien, livecodeur, formateur et parfois philosophe des techniques.</strong></p>
-        <p  className="hero__subtitle">Ce site, en cours d'élaboration, vise à rassembler <Link href='/docs/intro'>des tutoriels de livecoding</Link> et des liens vers :</p>
+        <p  className="hero__subtitle">Ce site, en cours d'élaboration, vise à rassembler <Link href='/docs/workshop'>des tutoriels de livecoding</Link> et des liens vers :</p>
         <p  className="hero__subtitle">...mon travail de musique livecodée sous le pseudo Jules Cipher >>>> 
         <Link
             className="button button--secondary button--lg"
@@ -28,6 +28,8 @@ function HomepageHeader() {
             to='https://reprogrammerboitenoi.re/'>
           https://reprogrammerboitenoi.re/
           </Link></p>
+        <p  className="hero__subtitle">J'anime également un atelier de live/creative coding (FoxDot et hydra notamment) tous les mardi à à 19h >>> 
+        <Link to='/docs/workshop'> plus d'informations ici</Link></p>
  
       </div>
     </header>
