@@ -6,7 +6,7 @@ sidebar_position: 3
 
 FoxDot peut aussi être utilisé pour jouer et manipuler des samples (échantillons audio).
 
-* Pour cela, il suffit d'utiliser `play` qui est un synthétiseur spécial.
+* Pour cela, il suffit d'utiliser le mot clé `play` à la place de `blip` ou autre synthé. `play` est un sampleur (SampleSynthDef dans supercollider).
 
 * Le premier argument de play doit être une **chaîne de caractères** (on parle de playstring dans FoxDot) au lieu d'une liste de nombres comme vous le feriez pour tout autre synthétiseur.
 
@@ -88,7 +88,9 @@ d1 >> play("x-o(-[-o])")
 d1 >> play("x-o[-(o )]")
 ```
 
-Les accolades sélectionnent un échantillon sonore au hasard si vous voulez plus de variété.
+### Sample au hasard
+
+Les accolades sélectionnent un sample au hasard si vous voulez plus de variété.
 
 `d1 >> play("x-o{-=[--][-o]}")`
 

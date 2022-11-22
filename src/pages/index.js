@@ -16,14 +16,10 @@ function HomepageHeader() {
         {/* <p className="hero__subtitle">{siteConfig.tagline}</p> */}
         <p className="hero__subtitle"><strong>Bonjour, je suis musicien, livecodeur, hacker, formateur et parfois philosophe des techniques.</strong></p>
         <p  className="hero__subtitle">Ce site vise à rassembler <Link href='/docs/workshop'>des tutoriels de livecoding</Link> et des liens vers :</p>
-        <p  className="hero__subtitle">...mon travail de musique livecodée sous le pseudo Jules Cipher >>>> 
-        <Link
-            className="button button--secondary button--lg"
-            to='https://linktr.ee/julescipher'>
-           https://linktr.ee/julescipher
-        </Link>
+        <p  className="hero__subtitle">...mon travail de musique livecodée sous le pseudo Jules Cipher >>>
+          <Link className="button button--secondary button--lg" to='https://linktr.ee/julescipher'> https://linktr.ee/julescipher</Link>
         </p>
-        <p  className="hero__subtitle">...et de philosophie, par exemple >>>>> <Link
+        <p  className="hero__subtit suis musle">...et de philosophie, par exemple >>> <Link
             className="button button--secondary button--lg"
             to='https://reprogrammerboitenoi.re/'>
           https://reprogrammerboitenoi.re/
