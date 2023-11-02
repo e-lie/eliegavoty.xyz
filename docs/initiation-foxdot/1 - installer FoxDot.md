@@ -1,33 +1,59 @@
 ---
+title: Installation de FoxDot/Renardo
 sidebar_position: 1
 ---
 
-# 1 - Installer FoxDot
+FoxDot n'est pas en l'état simple à installer pour tout un chacun, il implique le bon fonctionnement de plusieurs sous parties liées au développement (Python, Git, Supercollider)
+Renardo est un fork en cours d'élaboration qui vise à maintenir FoxDot et également à simplifier l'installation.
 
+Expliquons d'abord un peu la structure de l'ensemble.
 
-L'installation est officiellement décrite ici : https://foxdot.org/installation/#installing-foxdot
+## Comprendre la structure de Renardo/FoxDot
 
-Voici une version traduite et détaillée de ce processus:
+![foxdot architecture diagram](/img/foxdot_workshop_3.jpg)
 
-A télécharger:
+<!-- L'installation est officiellement décrite ici : https://foxdot.org/installation/#installing-foxdot -->
 
-* Python
-* SuperCollider
-* Git
+FoxDot/renardo est une librairie Python qui envoie des messages OSC (les notes à jouer) à SuperCollider qui se charge lui de générer le son en se connectant. Il faudra donc:
 
-Suivez les instructions d'installation pour télécharger et installer ces 3 dépendances. 
+- Installer SuperCollider et vérifier qu'il fonctionne et sait se connecter à la carte son
+- Installer un module dans SuperCollider qui permet à FoxDot de communiquer avec SC (nécessite git)
+- Installer FoxDot/renardo comme une librairie Python.
 
-Pour installer la dernière version de FoxDot ouvrez un terminal (command prompt sur Windows, terminal sur MacOS and Linux) puis executez:
+## Installeur automatique sur Linux basé sur Ansible
 
-`pip3 install FoxDot`
+- Installer `python-pip` ou `python3-pip` avec le gestionnaire de paquet
+- Clonez l'installer suivant: `git clone https://github.com/e-lie/reanardo_reaper_installer renardo_installer && cd renardo_installer`
 
-<!-- Please note, if you have Python 3 installed, the program might be called pip3, which helps discern between pip for Python 2 and 3. -->
+Ensuite au choix : installer le paquet `ansible` avec le gestionnaire de paquet ou créer un environnement virtuel python pour installer Ansible
 
-<!-- Alternatively, you can build from the source on GitHub and keep up to date with the development version:
+## Installation manuelle (éléments)
 
-$ git clone https://github.com/Qirky/FoxDot.git
-$ cd FoxDot
-$ python setup.py install -->
+### Installer Python
+
+- https://python.org
+
+### Installer FoxDot
+
+FoxDot s'installe comme une librairie Python. Cependant le logiciel n'est plus maintenu par son créateur donc la version disponible PyPI et installable directement avec pip n'est pas compatible avec python 3.11 et supérieur. Une solution raisonnable est d'installer un fork disponible sur GitHub : https://github.com/TheNuSan/FoxDot:
+
+    - `git clone https://github.com/TheNuSan/FoxDot`
+    - `cd FoxDot && pip install -e .`
+
+Renardo vise à remédier à cette situation en introduisant mais n'est pas encore prêt pour une installation facile. 
+
+### Installer Git
+
+- Souvent préinstallé sur Linux et MacOS. Sinon se référer au site officiel: https://git-scm.com/
+
+Pour tester l'installatino taper `git status` dans un terminal et vérifiez que la commande existe
+
+### Installer SuperCollider
+
+- Sur la plupart des distributions Linux avec le gestionnaire de paquet (`sudo apt install supercollider sc3-plugins` / `sudo pacman -S supercollider sc3-plugins` par exemple)
+- Sur Windows et MacOs avec de l'installer : https://supercollider.github.io/downloads
+
+### Installation du module FoxDot dans Supercollider (nécessite git)
 
 Ouvrez SuperCollider (souvent appelé `scide`) et installez le `Quark` FoxDot (cela permet à FoxDot de communiquer avec SuperCollider) en entrant la commande suivante dans l'éditeur puis en appuyant sur Ctrl+Entrée; ce qui "lance" la ligne de code:
 
@@ -35,4 +61,10 @@ Ouvrez SuperCollider (souvent appelé `scide`) et installez le `Quark` FoxDot (c
 
 Redémarrez l'éditeur SuperCollider et lancez la commande suivante : `FoxDot.start()`
 
-Enfin pour lancez l'éditeur FoxDot, ouvrez un terminal/ invite de commande et lancez `python3 -m FoxDot`
+Enfin pour lancez l'éditeur FoxDot, ouvrez un terminal/ invite de commande et lancez `python -m FoxDot`
+
+## Démarrage manuel
+
+- Sous Linux seulement et si vous utilisez jack (pas pipewire) :  démarrer le serveur Jack avec cadence ou qjackctl
+- Démarrer SuperCollider IDE et lancez `FoxDot.start;` à évaluer avec CTRL+Enter
+- Lancez FoxDot/renardo : `python3 -m FoxDot` ou `python -m FoxDot`

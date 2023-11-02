@@ -1,8 +1,8 @@
 ---
+title: Jouer des samples (batterie et autres sons)
 sidebar_position: 3
 ---
 
-# 3 - Jouer des samples (batterie et autres sons)
 
 FoxDot peut aussi être utilisé pour jouer et manipuler des samples (échantillons audio).
 
@@ -117,7 +117,7 @@ On peut, changez l'échantillon pour chaque coup (sample peut utiliser des patte
 `d1 >> play("(x[--])xu[--]", sample=[1,2,3])`
 
 
-### Petite listes des principaux samples de base de FoxDot
+### Petite listes des samples de base de FoxDot
 
 Kick (grosse caisse) `A v V x X W`
 

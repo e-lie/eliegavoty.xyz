@@ -1,8 +1,7 @@
 ---
+title: Intro - musique livecodée
 sidebar_position: 1
 ---
-
-# Intro
 
 Ce support est sous licence `CC-BY-SA`. Il est partiellement une traduction du tutoriel FoxDot (in app), du cours de iShapeNoise/BBScar ici `https://gitlab.com/iShapeNoise/foxdot_codingmusic_part1` et un travail original.
 
@@ -28,7 +27,7 @@ Ou comme l'exprime le manifeste de TOPLAP, un collectif à l'origine de la scèn
 
 ### Pourquoi utiliser du code pour composer de la musique 
 
-* Première on peut remarquer que l'écriture classique de la musique sur papier est déjà une sorte de code pour décrire une pièce musicale.
+* Premièrement on peut remarquer que l'écriture classique de la musique sur papier est déjà une sorte de code pour décrire une pièce musicale.
 
 * Avec le livecoding il est possible:
   * de décrire des règles de composition de façon très flexible

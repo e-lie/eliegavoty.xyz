@@ -1,20 +1,10 @@
 ---
 sidebar_position: 6
+title: Transformations et générateurs de Patterns
 ---
 
-# 6 - Transformations et générateurs de Patterns
 
 Incoming :)
-
-
-
-
-
-
-
-
-
-
 
 Les Pattern sont accompagnés de plusieurs méthodes permettant de manipuler le contenu.
 

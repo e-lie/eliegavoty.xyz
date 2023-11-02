@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
+title: Jouer des notes avec un synthétiseur
 ---
 
-# 2 - Jouer des notes avec un synthétiseur
 
 Pour jouer de la musique, FoxDot utilise des `Players`. On donne ensuite des instruction à ces players sur comment générer de la musique.
 
@@ -30,10 +30,13 @@ Pour afficher la liste des synthétiseurs/instruments disponibles exécutez:
 
 `print(SynthDefs)`
 
+Quelques synthés de base sympas (s'il sont installé -> toutes les versions de FoxDot n'ont pas les memes synthdefs):
+
+`blip, pluck, bbass, charm, space, jbass, viola, tb303, sinepad, rlead`
+
 Pour jouer plusieur notes on peut utiliser une liste (avec des crochets) de notes :
 
 `p1 >> blip([0, 1, 2])`
-
 
 Mais plus largement, vous aurez besoin de spécifier ainsi tous les paramètres de jeu ce que vous voulez changer...
 
@@ -49,7 +52,7 @@ Si la deuxième liste, l'amplitude dans cet exemple, est trop longue, alors la p
 
 `p1 >> blip([0, 2, 4], amp=[1, 2, 3, 1, 5])`
 
-Plus généralement, toutes les listes sont parcourues quelle que soit leur longueur
+Plus généralement, toutes les listes sont parcourues quelle que soit leur longueur et les boucles qu'elles représentent se décalent les unes par rapport aux autres.
 
 `p1 >> blip([0, 2, 4], dur=[1, 2], amp=[1, 2, 3, 1, 5])`
 
@@ -108,6 +111,6 @@ Et enlever la sourdine:
 <!-- Arrêtez (et non pas seulement coupez le son) des autres joueurs.
 p1.only() -->
 
-Utilisez Ctrl+. pour tout arrêter (littéralement tout effacer de l'horloge d'exécution). Ce raccourcit exécute en fait la commande suivante :
+Si vous etes dans FoxDot editor ou Pulsar, utilisez Ctrl+. pour tout arrêter (littéralement tout effacer de l'horloge d'exécution). Sinon ce raccourcit exécute en fait la commande suivante que vous pouvez lancez manuellement:
 
 `Clock.clear()`
