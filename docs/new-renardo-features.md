@@ -21,7 +21,7 @@ Let's add some details.
 
 ### Livecoding Reaper DAW for mixing and synthesizers
 
-Reaper, despite not beeing open source, is quite a community oriented software, and a very powerful one for (live) mixing/mastering music (even multichannel). It is multiplateform and pretty hackable, especially using it's API. Based on this and the [reapy](https://pypi.org/project/python-reapy/) python library, I added a (still experimental) functionnality to :
+Reaper, despite not beeing free nor open source, is a community oriented software, and a very powerful one for (live) mixing/mastering music (even multichannel). It is multiplateform and pretty hackable, especially using it's API. Based on this and the [reapy](https://pypi.org/project/python-reapy/) python library, I added a (still experimental) functionnality to :
 
 - instanciate any plugin inside Reaper
 - route MIDI notes automatically
@@ -33,7 +33,8 @@ This extension of possibilities is meaningful to me in the way it could fill a g
 
 This leads to the somehow political question : is inviting the "blackbox plugin" industry as first class citizen into a open and free ecosystem a good idea ? That's a real issue that should be accessed along the way. But I also feel that since a lot of people use at some point commercial plugins to achieve a musical result, it would be nice to have them patternable and visible in the code too.
 
-Let's see a demo video with the nice opensource Vital synth:
+This is a demo video showing reaper livecoding with the nice opensource Vital synth:
+
 <video width="640" height="360" controls>
   <source src="https://nx34151.your-storageshare.de/s/5JrrSjWjWWi3XsB/download/2024-09-29%2020-17-30.mp4"/>
 </video>
@@ -123,7 +124,7 @@ Some remarks about this:
 
 ### State of Renardo and contribution
 
-I'd like to conclude this by saying that Renardo is meant to be a community fork and not a personal project. We are already three people directly added to the repository for the software and it's documentation. I shall move it to a collective github organisation at some point. Don't hesitate to reach me by email or on Telegram.
+I'd like to conclude this by ampheemphasising that Renardo is meant to be a community fork and not a personal project. We are already three direct members to the software repository and it's documentation. I shall move it to a collective github organisation at some point. Don't hesitate to reach me by email or on Telegram.
 
 I haven't been advertising this fork a lot because, I feel the refactoring and modularization needs to be finished before it can be more usable and easy to contribute to. But you can still come with a pull request or any issue/remark and I will try to integrate it.
 
